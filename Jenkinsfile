@@ -18,11 +18,5 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-
-        stage('Archive Artifacts') {
-            steps {
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
-            }   
-        }
     }
 }
